@@ -20,6 +20,12 @@
   "cSpell.ignoreRegExpList": [
     "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
   ],
+  "tailwindCSS.includeLanguages": {
+    "njk": "html",
+    "nunjucks": "html",
+    "nunjuck": "html",
+  },
+  "tailwindCSS.emmetCompletions": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,

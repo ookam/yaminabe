@@ -1,6 +1,7 @@
 // デフォルトのtailwind.config.js
 // https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 const plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
@@ -14,6 +15,18 @@ module.exports = {
       tab_pc: '768px',
       pc: '1025px',
     },
+    colors: {
+      gray: colors.coolGray,
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: '#000',
+      white: '#fff',
+      green: colors.green,
+      red: colors.red,
+      yellow: colors.amber,
+      blue: colors.blue,
+      pink: colors.pink,
+    }
   },
   variants: {
     extend: {

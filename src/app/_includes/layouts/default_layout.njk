@@ -16,13 +16,15 @@
     {# メタタグ類（各ページで設定する） #}
     {%- include "layouts/default_layout/_meta_tag.njk" -%}
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen safe-bottom">
     {# 共通ヘッダー #}
     {%- include "layouts/default_layout/_header.njk" -%}
 
-    {%- block content -%}
-      {{ content | safe }}
-    {%- endblock -%}
+    <div>
+      {%- block content -%}
+        {{ content | safe }}
+      {%- endblock -%}
+    </div>
 
     {# 共通フッター #}
     {%- include "layouts/default_layout/_footer.njk" -%}
