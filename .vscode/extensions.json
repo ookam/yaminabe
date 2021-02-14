@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "shardulm94.trailing-spaces",
+    "streetsidesoftware.code-spell-checker",
+    "bradlc.vscode-tailwindcss",
+    "mosapride.zenkaku",
+    "stylelint.vscode-stylelint",
+    "usernamehw.errorlens",
+    "heybourn.headwind",
+    "ronnidc.nunjucks",
+    "mkaufman.htmlhint"
+  ]
+}

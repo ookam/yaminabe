@@ -1,0 +1,35 @@
+{
+  "cSpell.words": [
+    "eleventy",
+    "fixes",
+    "flexbugs",
+    "haml",
+    "htmlhint",
+    "mixins",
+    "noarchive",
+    "omegasisters",
+    "postcss",
+    "shortcode",
+    "tagname",
+    "tailwindcss",
+    "weppack"
+  ],
+  "[scss]": {
+    "editor.tabSize": 4,
+  },
+  "cSpell.ignoreRegExpList": [
+    "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "headwind.runOnSave": true,
+  "htmlhint.documentSelector": [
+    "html",
+    "njk",
+    "nunjucks",
+  ],
+  "files.associations":{
+    "*.njk": "nunjucks"
+  }
+}

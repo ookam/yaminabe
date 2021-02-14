@@ -1,0 +1,30 @@
+{# これは全てのページから読み込まれる基底ファイルです #}
+{# このページを編集することは殆どありませんので編集したくなった時は事前に編集すべきか確認して下さい #}
+<!doctype html>
+<html>
+  <head>
+    {# スマートフォンでの表示の際に広がるのを防ぐ（お約束） #}
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+
+    {# CDNから読み込むファイル類（webpackより先に読み込む） #}
+    {%- include "layouts/default_layout/_include_cdn.njk" -%}
+
+    {# webpackで生成されるjs, css #}
+    <script src="{% webpackAsset 'javascripts.pack.js' %}"></script>
+    <link rel="stylesheet" media="all" href="{% webpackAsset 'stylesheets.pack.css' %}" />
+
+    {# メタタグ類（各ページで設定する） #}
+    {%- include "layouts/default_layout/_meta_tag.njk" -%}
+  </head>
+  <body>
+    {# 共通ヘッダー #}
+    {%- include "layouts/default_layout/_header.njk" -%}
+
+    {%- block content -%}
+      {{ content | safe }}
+    {%- endblock -%}
+
+    {# 共通フッター #}
+    {%- include "layouts/default_layout/_footer.njk" -%}
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+layout: layouts/default_layout.njk
+meta_tags:
+  title: サンプルページ
+  description: サンプルページです。これをコピペして修正するだけで大体OKです
+  url: ""
+  ogp_image: ""
+---
+
+{% block content %}
+  <p>
+    sampleファイルです。こんな感じで設定して下さい
+  </p>
+
+  <p>
+    ↓これは画像のサンプルです
+  </p>
+  <img src="{{ '/images/fish.svg' | url }}" class="block w-40 h-40" />
+
+  <p>
+    ↓これはコンポーネントのサンプルです
+  </p>
+  {%- include "components/sample_component.njk" -%}
+{% endblock %}

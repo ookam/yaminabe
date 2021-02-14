@@ -1,0 +1,19 @@
+{# 各ページで指定している場合はそちらを優先、指定していない場合は下のデフォルトファイルから読み込みます #}
+{# /src/app/_data/default_meta_tags.json #}
+<title>{{ meta_tags.title if meta_tags.title else default_meta_tags.title }}</title>
+
+<meta name=    "description"         content="{{ meta_tags.description if meta_tags.description else default_meta_tags.description }}" />
+<meta name=    "twitter:title"       content="{{ meta_tags.title if meta_tags.title else default_meta_tags.title }}" />
+<meta name=    "twitter:url"         content="{{ meta_tags.url if meta_tags.url else default_meta_tags.url }}" />
+<meta name=    "twitter:card"        content="{{ meta_tags.twitter_card if meta_tags.twitter_card else default_meta_tags.twitter_card }}" />
+<meta name=    "twitter:image"       content="{{ meta_tags.ogp_image if meta_tags.ogp_image else default_meta_tags.ogp_image }}" />
+<meta name=    "twitter:description" content="{{ meta_tags.description if meta_tags.description else default_meta_tags.description }}" />
+<meta property="og:title"            content="{{ meta_tags.title if meta_tags.title else default_meta_tags.title }}" />
+<meta property="og:url"              content="{{ meta_tags.url if meta_tags.url else default_meta_tags.url }}" />
+<meta property="og:site_name"        content="{{ meta_tags.site_name if meta_tags.site_name else default_meta_tags.site_name }}" />
+<meta property="og:image"            content="{{ meta_tags.ogp_image if meta_tags.ogp_image else default_meta_tags.ogp_image }}" />
+<meta property="og:description"      content="{{ meta_tags.description if meta_tags.description else default_meta_tags.description }}" />
+<meta property="og:type"             content="{{ meta_tags.ogp_type if meta_tags.ogp_type else default_meta_tags.ogp_type }}" />
+<meta property="og:locale"           content="{{ meta_tags.ogp_locale if meta_tags.ogp_locale else default_meta_tags.ogp_locale }}" />
+<meta name=    "robots"              content="{{ meta_tags.robots if meta_tags.robots else default_meta_tags.robots }}" />
+<link rel=     "canonical"           href=   "{{ meta_tags.url if meta_tags.url else default_meta_tags.url }}" />

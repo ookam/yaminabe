@@ -1,0 +1,38 @@
+// サイト全体のスタイルを指定する
+// htmlのデフォルト
+html{
+    @apply bg-white;
+    font-size: 16px;
+
+    body{
+        font-family:
+            -apple-system,
+            'Yu Gothic Medium',
+            '游ゴシック Medium',
+            YuGothic,
+            '游ゴシック体',
+            'ヒラギノ角ゴ Pro W3',
+            BlinkMacSystemFont,
+            'Helvetica Neue',
+            'Segoe UI',
+            'Hiragino Kaku Gothic ProN',
+            'Hiragino Sans',
+            'ヒラギノ角ゴ ProN W3',
+            メイリオ,
+            Meiryo,
+            'Noto Sans CJK JP',
+            'Helvetica',
+            Arial, // Ubuntuの最後の砦
+            sans-serif,
+            Apple Color Emoji,
+            Segoe UI Emoji;
+    }
+}
+
+form{
+    margin-bottom: 0;
+}
+
+input{
+    @apply appearance-none;
+}

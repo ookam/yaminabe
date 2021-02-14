@@ -1,0 +1,11 @@
+{
+  "title":        "* タイトルが設定されていません。タイトルを設定して下さい *",
+  "description":  "* descriptionが設定されていません。descriptionを設定して下さい *",
+  "url":          "",
+  "ogp_image":    "",
+  "site_name":    "",
+  "robots":       "noarchive",
+  "twitter_card": "summary",
+  "ogp_type":     "website",
+  "ogp_locale":   "ja_JP"
+}
