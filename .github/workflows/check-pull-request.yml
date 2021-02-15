@@ -1,6 +1,6 @@
-name: when push main , auto release github page
+name: when pull_request , auto build checking
 on:
-  push:
+  pull_request:
     branches: main
 
 jobs:
@@ -15,10 +15,5 @@ jobs:
       # npmをキャッシュしてくれるやつ
       - name: yarn cache
         uses: bahmutov/npm-install@v1
-      - name: Install and Build 🔧
+      - name: can Build ? 🔧
         run: yarn build
-      - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
