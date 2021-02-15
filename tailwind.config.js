@@ -10,7 +10,7 @@ module.exports = {
       './src/packs/**',
     ]
   },
-  darkMode: false, // or 'media' or 'class',
+  darkMode: 'class', // or 'media' or 'class',
   theme: {
     screens: {
       tab_pc: '768px',
