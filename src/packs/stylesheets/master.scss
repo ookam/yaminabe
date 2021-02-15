@@ -37,6 +37,10 @@ input{
     @apply appearance-none;
 }
 
+a{
+    @apply hover:opacity-60;
+}
+
 // ダークモードをjsから取得するための変数
 @media (prefers-color-scheme: dark){
     html{
