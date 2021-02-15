@@ -4,18 +4,20 @@ $(function(){
   var isDarkmode = (window.isCookieDarkmode() || window.isDeviceDarkmode())
 
   // isDarkModeの時、<html>にdark-modeを追加
-  window.changeDarkMode(isDarkmode)
+  window.changeDarkMode(isDarkmode, false)
 })
 
 // isDarkModeの時、<html>にdark-modeを追加
-window.changeDarkMode = function(isDarkmode){
+window.changeDarkMode = function(isDarkmode, isSetCookie=true){
   if(isDarkmode){
     $('html').addClass('dark')
   }else{
     $('html').removeClass('dark')
   }
   // クッキーにセット
-  window.setCookieDarkmode(isDarkmode)
+  if(isSetCookie){
+    window.setCookieDarkmode(isDarkmode)
+  }
 }
 
 // ユーザーのデバイスがダークモードかどうかを確認
