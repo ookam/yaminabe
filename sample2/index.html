@@ -25,7 +25,7 @@
 <style>[class^="bi-"]::before, [class*=" bi-"]::before { display: block !important; }</style>
 
     <script src="/yaminabe/packs/javascripts.pack-904724fd25c3e971f9f8.js"></script>
-    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-66be7426fbfb54a30aa2.css" />
+    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-e967d223c046e9329108.css" />
 
     
 
@@ -47,9 +47,18 @@
 <meta name=    "robots"              content="noarchive" />
 <link rel=     "canonical"           href=   "" />
 </head>
-  <body class="flex flex-col min-h-screen safe-bottom dark:bg-gray-800">
-    <div class="flex items-center justify-center text-xl font-bold tracking-wider bg-white border-b border-gray-100 shadow-sm h-14">
+  <body class="flex flex-col min-h-screen safe-bottom dark:bg-gray-600">
+    <div class="relative flex items-center justify-center text-xl font-bold tracking-wider bg-white border-b border-gray-100 dark:border-transparent h-14 dark:bg-gray-800">
   <a href="/yaminabe/" class="block" id='js-rainbox-text'>Welcome to Yaminabe</a>
+  
+  <div class='absolute top-0 bottom-0 z-10 flex items-center text-xs right-3'>
+    <div class='px-1 text-gray-600' onclick='window.changeDarkMode(false)'>
+      <i class="bi bi-brightness-high"></i>
+    </div>
+    <div class='px-1 text-gray-200' onclick='window.changeDarkMode(true)'>
+      <i class="bi bi-moon"></i>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -65,16 +74,16 @@
 
 </div>
 
-    <div class="flex items-center justify-center px-5 py-10 mt-auto text-sm tracking-wider">
-  <a href="https://github.com/ookam/yaminabe" class="flex items-center pr-5 text-xs text-gray-400 hover:text-gray-700" target='_BLANK'>
+    <div class="flex flex-wrap items-center justify-center px-5 py-8 mt-auto text-sm tracking-wider">
+  <a href="https://github.com/ookam/yaminabe" class="flex items-center pr-5 text-xs text-gray-400 h-7 hover:text-gray-700" target='_BLANK'>
     <i class="w-4 bi bi-github"></i>
     GitHubリポジトリ
   </a>
-  <a href="https://twitter.com/sesere115" class="flex items-center pr-5 text-xs text-gray-400 hover:text-gray-700" target='_BLANK'>
+  <a href="https://twitter.com/sesere115" class="flex items-center pr-5 text-xs text-gray-400 h-7 hover:text-gray-700" target='_BLANK'>
     <i class="w-4 bi bi-twitter"></i>
     sesere115
   </a>
-  <span class='text-xs text-gray-400 hover:text-gray-700'>
+  <span class='flex items-center text-xs text-gray-400 h-7 hover:text-gray-700'>
     product by Yaminabe
   </span>
 </div>
