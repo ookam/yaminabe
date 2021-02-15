@@ -14,7 +14,7 @@
   crossorigin="anonymous"></script>
 
     <script src="/yaminabe/packs/javascripts.pack-6a6584cf6b09d5c60509.js"></script>
-    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-fe2f4685f551b51cefc0.css" />
+    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-ea2a902ffc3b8f002b22.css" />
 
     
 
@@ -50,6 +50,47 @@
 どういう方向性にするかはまだ全然考えてないのでissueもプルリクも待ってます
 
 <a href="./logs/001" class="block text-blue-700 underline">過去のログを見る #001</a>
+
+<div class="flex items-center">
+  現在の世代は：
+  <span class="px-1" id="js-github-commit-count">...</span>
+  です
+</div>
+
+<script>
+  $(function(){
+    // ajaxで最新のリポジトリのハッシュを取得
+    $.ajax(
+      'https://api.github.com/repos/ookam/yaminabe/git/refs/heads/main',
+      {
+        dataType: 'json',
+        timeout: 10000,
+        success: function(data, status, xhr){
+          check_sedai(data.object.sha)
+        }
+      }
+    )
+
+    // ajaxでコミットの数を取得
+    function check_sedai(latest_commit_hash){
+      // 一番最初のコミットのハッシュ
+      var most_old_commit_hash = '07da7612008968b34ee44c9b3deda1c0b843726d'
+      $.ajax(
+        `https://api.github.com/repos/ookam/yaminabe/compare/${latest_commit_hash}...${most_old_commit_hash}`,
+        {
+          dataType: 'json',
+          timeout: 10000,
+          success: function(data, status, xhr){
+            // behind = 間にx件あるのでそれに + 1 すればコミット数が取れる
+            var count = data.behind_by + 1
+            // js-github-commit-countにセットして終わり
+            $('#js-github-commit-count').text(count)
+          }
+        }
+      )
+    }
+  })
+</script>
 
 
 </div>
