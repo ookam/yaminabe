@@ -17,7 +17,7 @@ module.exports = {
       pc: '1025px',
     },
     colors: {
-      gray: colors.coolGray,
+      gray: colors.trueGray,
       transparent: 'transparent',
       current: 'currentColor',
       black: '#000',
@@ -39,6 +39,10 @@ module.exports = {
   plugins: [
     plugin(function({ addUtilities }){
       const newUtilities = {
+        '.container': {
+          maxWidth: '1000px',
+          width: '100%'
+        },
         '.bg-blur': {
           backdropFilter: 'blur(4px)'
         },
