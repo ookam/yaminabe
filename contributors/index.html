@@ -25,7 +25,7 @@
 <style>[class^="bi-"]::before, [class*=" bi-"]::before { display: block !important; }</style>
 
     <script src="/yaminabe/packs/javascripts.pack-7fe9c5cddef494352b93.js"></script>
-    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-6bb6afd6f047c75ce190.css" />
+    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-f8e7358579cd8c05ea21.css" />
 
     
 
@@ -69,32 +69,84 @@
 <div>
 
 
-<div id='js-github-contributors'>Loading...</div>
-
-
-<script>
-  $(function(){
-    // ajaxで最新のリポジトリのハッシュを取得
-    $.ajax(
-      'https://api.github.com/repos/ookam/yaminabe/stats/contributors',
-      {
-        dataType: 'json',
-        timeout: 10000,
-        success: function(data, status, xhr){
-          var $inner = $('<div></div>')
-          $.each(data, function(index, value){
-            var icon  = value.author.avatar_url
-            var name  = value.author.login
-            var url   = value.author.html_url
-            var count = value.total
-            $inner.append(`<div class='flex p-4'><a href='${url}'><img src='${icon}' class='block w-20 h-20'> name: ${name}, commit: ${count} </a></div>`)
-          })
-          $('#js-github-contributors').html($inner)
-        }
-      }
-    )
-  })
-</script>
+<div class="mx-auto my-16 space-y-24 tab_pc:px-8 pc:px-12">
+  <h2 class="text-3xl font-extrabold tracking-tight text-center tab_pc:text-4xl pc:text-5xl">開発参加者たち</h2>
+  <ul class="grid grid-cols-2 mx-auto gap-x-4 gap-y-8 tab_pc:grid-cols-3 pc:grid-cols-4 tab_pc:gap-x-6 tab_pc:gap-y-10 pc:max-w-5xl pc:gap-x-8 pc:gap-y-12">
+    
+      <li>
+        <a class="space-y-4" href="https://github.com/Miyoshi-Ryota">
+          <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="https://avatars.githubusercontent.com/u/23313273?v=4" alt="Miyoshi-Ryota" />
+          <div class="space-y-2">
+            <div class="font-medium text-center">
+              <h3 class="text-xl text-gray-900 tab_pc:text-2xl pc:text-3xl">Miyoshi-Ryota</h3>
+              <p class="text-gray-700 tab_pc:text-lg pc:text-xl">コミット数1</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    
+      <li>
+        <a class="space-y-4" href="https://github.com/dtakkiy">
+          <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="https://avatars.githubusercontent.com/u/24822590?v=4" alt="dtakkiy" />
+          <div class="space-y-2">
+            <div class="font-medium text-center">
+              <h3 class="text-xl text-gray-900 tab_pc:text-2xl pc:text-3xl">dtakkiy</h3>
+              <p class="text-gray-700 tab_pc:text-lg pc:text-xl">コミット数1</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    
+      <li>
+        <a class="space-y-4" href="https://github.com/mikkame">
+          <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="https://avatars.githubusercontent.com/u/13947046?v=4" alt="mikkame" />
+          <div class="space-y-2">
+            <div class="font-medium text-center">
+              <h3 class="text-xl text-gray-900 tab_pc:text-2xl pc:text-3xl">mikkame</h3>
+              <p class="text-gray-700 tab_pc:text-lg pc:text-xl">コミット数1</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    
+      <li>
+        <a class="space-y-4" href="https://github.com/noumi0k">
+          <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="https://avatars.githubusercontent.com/u/5664171?v=4" alt="noumi0k" />
+          <div class="space-y-2">
+            <div class="font-medium text-center">
+              <h3 class="text-xl text-gray-900 tab_pc:text-2xl pc:text-3xl">noumi0k</h3>
+              <p class="text-gray-700 tab_pc:text-lg pc:text-xl">コミット数1</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    
+      <li>
+        <a class="space-y-4" href="https://github.com/ookam">
+          <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="https://avatars.githubusercontent.com/u/29398170?v=4" alt="ookam" />
+          <div class="space-y-2">
+            <div class="font-medium text-center">
+              <h3 class="text-xl text-gray-900 tab_pc:text-2xl pc:text-3xl">ookam</h3>
+              <p class="text-gray-700 tab_pc:text-lg pc:text-xl">コミット数21</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    
+      <li>
+        <a class="space-y-4" href="https://github.com/shunkakinoki">
+          <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="https://avatars.githubusercontent.com/u/39187513?v=4" alt="shunkakinoki" />
+          <div class="space-y-2">
+            <div class="font-medium text-center">
+              <h3 class="text-xl text-gray-900 tab_pc:text-2xl pc:text-3xl">shunkakinoki</h3>
+              <p class="text-gray-700 tab_pc:text-lg pc:text-xl">コミット数1</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    
+  </ul>
+</div>
 
 
 </div>
