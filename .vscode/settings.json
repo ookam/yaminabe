@@ -22,8 +22,6 @@
   ],
   "tailwindCSS.includeLanguages": {
     "njk": "html",
-    "nunjucks": "html",
-    "nunjuck": "html",
   },
   "tailwindCSS.emmetCompletions": true,
   "css.validate": false,

@@ -36,7 +36,10 @@ module.exports = (eleventyConfig) => {
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader([
       'src/app/_includes',
-    ])
+    ], {
+      noCache: true,
+      watch: true,
+    })
   );
 
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
