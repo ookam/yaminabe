@@ -13,8 +13,8 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
 
-    <script src="/yaminabe/packs/javascripts.pack-6a6584cf6b09d5c60509.js"></script>
-    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-8474cf23794473e9eaf4.css" />
+    <script src="/yaminabe/packs/javascripts.pack-f4d6663972fb62c3809a.js"></script>
+    <link rel="stylesheet" media="all" href="/yaminabe/packs/stylesheets.pack-de33b493f04493567421.css" />
 
     
 
@@ -38,8 +38,14 @@
 </head>
   <body class="flex flex-col min-h-screen safe-bottom">
     <div class="flex items-center justify-center text-xl font-bold tracking-wider bg-white border-b border-gray-100 h-14">
-  <a href="/yaminabe/" class="block">Header</a>
+  <a href="/yaminabe/" class="block" id='js-rainbox-text'>Welcome to Yaminabe</a>
 </div>
+
+<script>
+  $(function(){
+    $('#js-rainbox-text').rainbow()
+  });
+</script>
 <div><h1>#1</h1>
 <p>ここにスクショ整理すると良い？</p>
 <h1>#2</h1>
