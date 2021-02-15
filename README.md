@@ -23,7 +23,7 @@ https://ookam.github.io/yaminabe/
 
 ## どうやって起動するの？
 
-基幹はこれを使っているのでこれを見てもらえると嬉しいです
+基盤はこれを使っているのでこれを見てもらえると嬉しいです
 
 https://github.com/ookam/static_homepage
 
