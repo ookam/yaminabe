@@ -18,6 +18,7 @@
     }
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "url-search-params-polyfill": "^7.0.0"
   },
   "devDependencies": {
