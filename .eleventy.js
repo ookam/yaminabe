@@ -77,7 +77,7 @@ module.exports = (eleventyConfig) => {
       "html",
       // "liquid",
       // "ejs",
-      // "md",
+      "md",
       // "hbs",
       // "mustache",
       // "haml",
