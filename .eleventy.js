@@ -38,7 +38,6 @@ module.exports = (eleventyConfig) => {
       'src/app/_includes',
     ], {
       noCache: true,
-      watch: true,
     })
   );
 
