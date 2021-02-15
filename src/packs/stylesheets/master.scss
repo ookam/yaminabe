@@ -36,3 +36,10 @@ form{
 input{
     @apply appearance-none;
 }
+
+// ダークモードをjsから取得するための変数
+@media (prefers-color-scheme: dark){
+    html{
+        --isDarkmode: true;
+    }
+}
