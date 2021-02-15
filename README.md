@@ -26,3 +26,8 @@ https://ookam.github.io/yaminabe/
 基幹はこれを使っているのでこれを見てもらえると嬉しいです
 
 https://github.com/ookam/static_homepage
+
+## プルリク送ってみたいけど何も分からん
+
+プルリクの送り方を書いてみたよ！間違えても問題ないから送ってみよう！
+https://github.com/ookam/yaminabe/blob/main/CONTRIBUTING.md
