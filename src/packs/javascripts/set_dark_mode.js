@@ -10,10 +10,15 @@ $(function(){
   window.changeDarkMode(false)
 })
 
+// ダークモードのトグル処理
+window.toggleDarkMode = function(){
+  // ダークモードのトグル処理
+  isDarkmode = isDarkmode ? false : true
+  window.changeDarkMode()
+}
+
 // isDarkModeの時、<html>にdark-modeを追加
 window.changeDarkMode = function(isSetCookie=true){
-  // ダークモードのトグル処理
-  isDarkmode = isDarkmode ? false: true
   if(isDarkmode){
     $('html').addClass('dark')
     $('#js-darkmode-text').addClass('text-gray-200').removeClass('text-gray-600').text('䦣')
