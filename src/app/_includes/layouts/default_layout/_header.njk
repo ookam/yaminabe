@@ -2,11 +2,8 @@
   <a href="{{ '/' | url}}" class="block" id='js-rainbox-text'>Welcome to Yaminabe</a>
   {# ダークモードの切り替えボタン #}
   <div class='absolute z-10 flex items-center text-s top-2 bottom-2 right-3 cursor-pointer'>
-    <div class='px-1 text-gray-600' onclick='window.changeDarkMode(false)'>
-      灮
-    </div>
-    <div class='px-1 text-gray-200' onclick='window.changeDarkMode(true)'>
-      䦣
+    <div class='px-1' onclick='window.toggleDarkMode()'>
+      <span id="js-darkmode-text">灮</span>
     </div>
   </div>
 </div>
