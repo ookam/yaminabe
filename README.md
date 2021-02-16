@@ -15,6 +15,15 @@ https://ookam.github.io/yaminabe/
 
 なんでも良いのでissueをくれたら改善しようと思いますのでどなたでもissue大歓迎です！！！くれたらめっちゃ喜びます！！！！
 
+<details><summary>issueとはなんぞや？</summary><div>
+  
+  - issue = 問題 という意味です。このプロジェクトに対する問題（意見・要望や不具合など）を提案することを指します。
+  - つまり「なにか意見があれば書き込んでね！」ってことなので、初めての方も気軽にどうぞ！
+  - issueの提案はこちらから → https://github.com/ookam/yaminabe/issues
+
+</div></details>
+
+
 ## コーディング
 
 コーディングは基本的に[僕](https://github.com/ookam)がやる予定ですが、プルリクも大歓迎です！！
