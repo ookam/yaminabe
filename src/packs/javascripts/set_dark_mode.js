@@ -1,18 +1,25 @@
+// ダークモード判定用変数
+var isDarkmode
+
 // 起動時にダークモードを確認＆セットする
 $(function(){
   // クッキーにダークモードが指定されているか、ユーザーのデバイスがダークモードの時ダークモードを利用
-  var isDarkmode = (window.isCookieDarkmode() || window.isDeviceDarkmode())
+  isDarkmode = (window.isCookieDarkmode() || window.isDeviceDarkmode())
 
   // isDarkModeの時、<html>にdark-modeを追加
-  window.changeDarkMode(isDarkmode, false)
+  window.changeDarkMode(false)
 })
 
 // isDarkModeの時、<html>にdark-modeを追加
-window.changeDarkMode = function(isDarkmode, isSetCookie=true){
+window.changeDarkMode = function(isSetCookie=true){
+  // ダークモードのトグル処理
+  isDarkmode = isDarkmode ? false: true
   if(isDarkmode){
     $('html').addClass('dark')
+    $('#js-darkmode-text').addClass('text-gray-200').removeClass('text-gray-600').text('䦣')
   }else{
     $('html').removeClass('dark')
+    $('#js-darkmode-text').addClass('text-gray-600').removeClass('text-gray-200').text('灮')
   }
   // クッキーにセット
   if(isSetCookie){
