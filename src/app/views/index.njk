@@ -19,45 +19,11 @@ meta_tags:
 
 <div class="flex items-center">
   現在の世代は：
-  <span class="px-1" id="js-github-commit-count">...</span>
+  <span class="px-1">{{commit_count}}</span>
   です
 </div>
 
 <div>あなたは、<span id="js-visitor-count">00000000</span>人目の訪問者です。</div>
 
-<script>
-  $(function(){
-    // ajaxで最新のリポジトリのハッシュを取得
-    $.ajax(
-      'https://api.github.com/repos/ookam/yaminabe/git/refs/heads/main',
-      {
-        dataType: 'json',
-        timeout: 10000,
-        success: function(data, status, xhr){
-          check_sedai(data.object.sha)
-        }
-      }
-    )
-
-    // ajaxでコミットの数を取得
-    function check_sedai(latest_commit_hash){
-      // 一番最初のコミットのハッシュ
-      var most_old_commit_hash = '07da7612008968b34ee44c9b3deda1c0b843726d'
-      $.ajax(
-        `https://api.github.com/repos/ookam/yaminabe/compare/${latest_commit_hash}...${most_old_commit_hash}`,
-        {
-          dataType: 'json',
-          timeout: 10000,
-          success: function(data, status, xhr){
-            // behind = 間にx件あるのでそれに + 1 すればコミット数が取れる
-            var count = data.behind_by + 1
-            // js-github-commit-countにセットして終わり
-            $('#js-github-commit-count').text(count)
-          }
-        }
-      )
-    }
-  })
-</script>
 
 {% endblock %}
