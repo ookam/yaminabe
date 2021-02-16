@@ -18,6 +18,6 @@ meta_tags:
   です
 </div>
 
-<div>あなたは、<span id="js-visitor-count">{{ toppage_counter }}</span>人目の訪問者です。</div>
-
+<div>あなたは、<span id="js-visitor-count">Loading...</span>人目の訪問者です。</div>
+<script>$('#js-visitor-count').set_top_page_counter()</script>
 {% endblock %}
