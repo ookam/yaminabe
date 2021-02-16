@@ -29,6 +29,10 @@ html{
     }
 }
 
+body{
+    @apply text-gray-900 dark:text-gray-200;
+}
+
 form{
     margin-bottom: 0;
 }
@@ -38,7 +42,7 @@ input{
 }
 
 a{
-    @apply hover:opacity-60;
+    @apply hover:opacity-60 text-blue-700 dark:text-blue-400;
 }
 
 // ダークモードをjsから取得するための変数
