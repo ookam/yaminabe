@@ -51,3 +51,8 @@ a{
         --isDarkmode: true;
     }
 }
+
+// タッチデバイスでクリックした際、ハイライトしない
+#js-darkmode-text_ancestor{
+    -webkit-tap-highlight-color: transparent;
+}
