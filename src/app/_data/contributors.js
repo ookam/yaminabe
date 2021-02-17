@@ -3,10 +3,11 @@ var axios  = require('axios');
 module.exports = () => {
   return new Promise((resolve, reject) => {
     axios
-    .get("https://api.github.com/repos/ookam/yaminabe/contributors",
-    {
-      timeout : 10000,
-    }
+    .get(
+      "https://api.github.com/repos/ookam/yaminabe/contributors",
+      {
+        timeout : 10000,
+      }
     )
     .then((response) => {
       const data = []
