@@ -19,13 +19,19 @@ module.exports = async () => {
       })
     })
     return contributors
-  }catch{
-    // 取得に失敗した場合はダミーのデータを返す
-    return [{
-      icon: `https://1.bp.blogspot.com/-WtFMJ6-1dj8/Wn1aLwFok7I/AAAAAAABKSw/m1EvZlo6XiQ3Zwx1oTdBv9KP598RAFGhwCLcBGAs/s400/pose_kuyashii_man.png`,
-      name: `取得に失敗しました`,
-      url: `https://ookam.github.io/yaminabe/`,
-      count: 0,
-    }]
+  }catch(error){
+    if (process.env.ELEVENTY_ENV === "production") {
+      console.error("contributorsの取得に失敗しました。レート制限に引っかかっている可能性があります。")
+      // productionではビルドを失敗させる
+      return Promise.reject(error)
+    } else {
+      // production以外で取得に失敗した場合はダミーのデータを返す
+      return [{
+        icon: `https://1.bp.blogspot.com/-WtFMJ6-1dj8/Wn1aLwFok7I/AAAAAAABKSw/m1EvZlo6XiQ3Zwx1oTdBv9KP598RAFGhwCLcBGAs/s400/pose_kuyashii_man.png`,
+        name: `取得に失敗しました`,
+        url: `https://ookam.github.io/yaminabe/`,
+        count: 0,
+      }]
+    }
   }
 }
