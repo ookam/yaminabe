@@ -47,7 +47,7 @@ $ yarn startを実行するとローカルサーバ(http://localhost:8080)が起
 
 - [tailwind](https://tailwindcss.com/)
 
-  CSSフレームワークの1つ。マージンとかフォントサイズなど、よく使われるスタイルがあらかじめクラスとして登録されている。自分で独自クラスを定義する前に一度[taiwind 公式ドキュメント](https://tailwindcss.com/docs/installation)を確認してみるとよい。
+  CSSフレームワークの1つ。マージンとかフォントサイズなど、よく使われるスタイルがあらかじめクラスとして登録されている。自分で独自クラスを定義する前に一度[tailwind 公式ドキュメント](https://tailwindcss.com/docs/installation)を確認してみるとよい。
 
   下記は、tailwindの実際の使用例。
 
