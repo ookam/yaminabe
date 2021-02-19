@@ -8,17 +8,26 @@ meta_tags:
 {% block content %}
 
 <div class="mx-auto my-16 space-y-24 tab_pc:px-8 pc:px-12">
-  <h2 class="text-3xl font-extrabold tracking-tight text-center tab_pc:text-4xl pc:text-5xl">開発参加者たち</h2>
-  <ul class="grid grid-cols-2 mx-auto gap-x-4 gap-y-8 tab_pc:grid-cols-3 pc:grid-cols-4 tab_pc:gap-x-6 tab_pc:gap-y-10 pc:max-w-5xl pc:gap-x-8 pc:gap-y-12">
+  <div class="text-center">
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-50 tab_pc:text-4xl pc:text-5xl">
+      {{ meta_tags.title }}
+    </h2>
+    <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 dark:text-gray-300 tab_pc:mt-4 pc:mt-6">
+      {{ meta_tags.description }}
+    </p>
+  </div>
+  <ul class="grid grid-cols-2 mx-auto gap-x-4 gap-y-8 tab_pc:grid-cols-3 pc:grid-cols-4 tab_pc:gap-x-10 tab_pc:gap-y-10 pc:max-w-5xl pc:gap-x-8 pc:gap-y-12">
     {% for contributor in contributors %}
       <li>
-        <a class="space-y-4" href="{{ contributor.url }}">
-          <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="{{contributor.icon}}" alt="{{ contributor.name }}" />
-          <div class="space-y-2">
-            <div class="font-medium text-center">
-              <h3 class="text-xl text-gray-900 tab_pc:text-2xl pc:text-3xl">{{ contributor.name }}</h3>
-              <p class="text-gray-700 tab_pc:text-lg pc:text-xl">コミット数{{ contributor.count }}</p>
-            </div>
+        <a href="{{ contributor.url }}">
+          <div class="p-4 space-y-4 transition-all duration-500 border border-gray-100 rounded-md shadow-sm dark:border-opacity-0 hover:shadow-xl dark:bg-gray-700 transform-gpu hover:-translate-y-1 hover:-translate-x-1">
+              <img class="w-20 h-20 mx-auto rounded-full pc:w-24 pc:h-24" src="{{contributor.icon}}" alt="{{ contributor.name }}" />
+              <div class="space-y-2">
+                <div class="font-medium text-center">
+                  <h3 class="text-xl text-gray-900 dark:text-gray-50 tab_pc:text-2xl">{{ contributor.name }}</h3>
+                  <p class="text-gray-700 dark:text-gray-200 tab_pc:text-lg">コミット数 {{ contributor.count }}</p>
+                </div>
+              </div>
           </div>
         </a>
       </li>
